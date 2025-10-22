@@ -2,257 +2,192 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>20eventi — Eventi chiavi in mano</title>
-  <meta name="description" content="Eventi aziendali e privati chiavi in mano: location, allestimenti, food & beverage e intrattenimento. Preventivo in 24 ore.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>20EVENTI — CREIAMO MOMENTI CHE RESTANO</title>
+  <meta name="description" content="Eventi aziendali e privati chiavi in mano: location, allestimenti, food & beverage, entertainment.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="navbar">
-    <div class="container nav-inner">
-      <div class="brand"><span class="logo">20</span><span>20eventi</span></div>
-      <nav class="nav-links">
-        <a href="#pacchetti">Pacchetti</a>
-        <a href="#preventivo">Preventivo</a>
-        <a href="#contatti">Contatti</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">20</div>
+        <div class="brand-text">
+          <span class="brand-name">20EVENTI</span>
+          <span class="brand-payoff">CREIAMO MOMENTI CHE RESTANO</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#pacchetti" class="nav-link">PACCHETTI</a>
+        <a href="#preventivo" class="nav-link">PREVENTIVO</a>
+        <a href="#contatti" class="btn btn-outline">RICHIEDI PREVENTIVO</a>
       </nav>
-      <a class="btn primary" href="#preventivo">Richiedi preventivo</a>
+      <button class="menu-toggle" aria-label="Apri menu" onclick="toggleMenu()">☰</button>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h1>Eventi aziendali e privati <span class="chip">chiavi in mano</span></h1>
-          <p class="lead">Location, allestimenti, food &amp; beverage e intrattenimento. Tu pensi agli ospiti, al resto pensiamo noi.</p>
-          <div class="actions">
-            <a class="btn primary" href="#preventivo">Calcola preventivo</a>
-            <a class="btn ghost" href="#pacchetti">Vedi pacchetti</a>
+    <!-- Hero -->
+    <section class="hero gradient">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>EVENTI AZIENDALI E PRIVATI CHIAVI IN MANO</h1>
+          <p class="subtitle">LOCATION, ALLESTIMENTI, FOOD & BEVERAGE E INTRATTENIMENTO. TU PENSI AGLI OSPITI, AL RESTO PENSIAMO NOI.</p>
+          <div class="cta-row">
+            <a href="#preventivo" class="btn btn-primary">CALCOLA PREVENTIVO</a>
+            <a href="#pacchetti" class="btn btn-secondary">VEDI PACCHETTI</a>
+            <a href="https://wa.me/?text=Ciao%2C%20vorrei%20un%20preventivo%20per%20un%20evento%20aziendale" class="btn btn-whatsapp" target="_blank" rel="noopener">SCRIVICI SU WHATSAPP</a>
           </div>
-          <ul class="bullets">
-            <li>Rete location partner</li>
-            <li>Team produzione</li>
-            <li>Preventivo in 24h</li>
-          </ul>
-        </div>
-        <div class="features">
-          <div class="card">
-            <div class="card-title">Location su misura</div>
-            <div class="muted">Loft, terrazze, ville, spazi industriali.</div>
-          </div>
-          <div class="card">
-            <div class="card-title">Catering di qualità</div>
-            <div class="muted">Menu personalizzati anche speciali.</div>
-          </div>
-          <div class="card">
-            <div class="card-title">Bar &amp; beverage</div>
-            <div class="muted">Selezione vini e cocktail list.</div>
-          </div>
-          <div class="card">
-            <div class="card-title">Entertainment</div>
-            <div class="muted">DJ, live band, luci e audio pro.</div>
+          <div class="pill-row">
+            <span class="pill">LOCATION SU MISURA</span>
+            <span class="pill">CATERING DI QUALITÀ</span>
+            <span class="pill">BAR & BEVERAGE</span>
+            <span class="pill">ENTERTAINMENT</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="pacchetti" class="section section-alt">
+    <!-- Pacchetti -->
+    <section id="pacchetti" class="section">
       <div class="container">
-        <h2>Pacchetti</h2>
-        <p class="muted">Scegli una base e personalizza tutto.</p>
-        <div class="grid-3">
-          <div class="card">
-            <div class="muted">Perfetto per eventi smart</div>
-            <h3>Basic</h3>
-            <div class="price">€ 990 <span>base</span></div>
-            <ul class="list">
-              <li>Consulenza evento</li>
-              <li>Location partner base</li>
-              <li>Impianto audio standard</li>
-              <li>Allestimento essenziale</li>
+        <h2>PACCHETTI</h2>
+        <p class="section-sub">SCEGLI UNA BASE E PERSONALIZZA TUTTO.</p>
+        <div class="cards">
+          <article class="card">
+            <div class="card-header">
+              <h3>BASIC</h3>
+              <p class="price"><span class="from">A PARTIRE DA</span> € 990</p>
+            </div>
+            <ul class="card-list">
+              <li>CONSULENZA EVENTO</li>
+              <li>LOCATION PARTNER BASE</li>
+              <li>IMPIANTO AUDIO STANDARD</li>
+              <li>ALLESTIMENTO ESSENZIALE</li>
             </ul>
-            <button class="btn full" data-pack="basic">Scegli Basic</button>
-          </div>
+            <a href="#preventivo" class="btn btn-ghost">SCEGLI BASIC</a>
+          </article>
 
-          <div class="card featured">
-            <div class="muted">Il più scelto per aziende</div>
-            <h3>Plus</h3>
-            <div class="price">€ 2.490 <span>base</span></div>
-            <ul class="list">
-              <li>Location premium (loft/terrazza)</li>
-              <li>Audio/Luci professionali</li>
-              <li>Food &amp; beverage selezione</li>
-              <li>Coordinatore evento on‑site</li>
+          <article class="card featured">
+            <div class="badge">PIÙ SCELTO</div>
+            <div class="card-header">
+              <h3>PLUS</h3>
+              <p class="price"><span class="from">A PARTIRE DA</span> € 2.490</p>
+            </div>
+            <ul class="card-list">
+              <li>LOCATION PREMIUM (LOFT/TERRAZZA)</li>
+              <li>AUDIO/LUCI PROFESSIONALI</li>
+              <li>FOOD & BEVERAGE SELEZIONE</li>
+              <li>COORDINATORE EVENTO ON-SITE</li>
             </ul>
-            <button class="btn full" data-pack="plus">Scegli Plus</button>
-          </div>
+            <a href="#preventivo" class="btn btn-primary">SCEGLI PLUS</a>
+          </article>
 
-          <div class="card">
-            <div class="muted">Tutto incluso, zero pensieri</div>
-            <h3>Full Experience</h3>
-            <div class="price">€ 4.990 <span>base</span></div>
-            <ul class="list">
-              <li>Location esclusiva</li>
-              <li>Catering completo (veg/vegano/gluten‑free)</li>
-              <li>Open bar + cocktail list</li>
-              <li>Entertainment e service completo</li>
+          <article class="card">
+            <div class="card-header">
+              <h3>FULL EXPERIENCE</h3>
+              <p class="price"><span class="from">A PARTIRE DA</span> € 4.990</p>
+            </div>
+            <ul class="card-list">
+              <li>LOCATION ESCLUSIVA</li>
+              <li>CATERING COMPLETO (VEG/VEGANO/GLUTEN-FREE)</li>
+              <li>OPEN BAR + COCKTAIL LIST</li>
+              <li>ENTERTAINMENT & SERVICE COMPLETO</li>
             </ul>
-            <button class="btn full" data-pack="full">Scegli Full</button>
-          </div>
+            <a href="#preventivo" class="btn btn-ghost">SCEGLI FULL</a>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="preventivo" class="section">
-      <div class="container">
-        <h2>Calcola preventivo &amp; contattaci</h2>
-        <p class="muted">Compila i campi: ricevi una stima indicativa e ti ricontattiamo in 24h.</p>
+    <!-- Preventivo -->
+    <section id="preventivo" class="section muted">
+      <div class="container narrow">
+        <h2>RICHIEDI PREVENTIVO</h2>
+        <p class="section-sub">RISPOSTA ENTRO 24H.</p>
 
-        <div class="layout">
-          <form id="quote-form" class="card form">
-            <div class="row">
-              <div class="col">
-                <label>Nome e cognome</label>
-                <input type="text" name="nome" placeholder="Mario Rossi" required />
-              </div>
-              <div class="col">
-                <label>Email</label>
-                <input type="email" name="email" placeholder="mario@email.it" required />
-              </div>
-              <div class="col">
-                <label>Telefono</label>
-                <input type="text" name="telefono" placeholder="+39…" required />
-              </div>
+        <!-- NOTE: replace YOUR_FORMSPREE_ID with your Formspree form ID in the action attribute -->
+        <form id="quoteForm" class="form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+          <div class="grid">
+            <div class="field">
+              <label>NOME E COGNOME</label>
+              <input type="text" name="nome" placeholder="NOME COGNOME" required />
             </div>
-
-            <div class="row">
-              <div class="col">
-                <label>Data</label>
-                <input type="date" name="data" />
-              </div>
-              <div class="col">
-                <label>Persone</label>
-                <input type="number" name="persone" min="10" max="500" value="50" />
-              </div>
-              <div class="col">
-                <label>Budget indicativo (€)</label>
-                <input type="number" name="budget" min="500" step="50" value="2500" />
-              </div>
-              <div class="col">
-                <label>Città</label>
-                <input type="text" name="citta" placeholder="Milano" value="Milano" />
-              </div>
+            <div class="field">
+              <label>EMAIL</label>
+              <input type="email" name="email" placeholder="info@20eventi.it" required />
             </div>
-
-            <div class="row">
-              <div class="col">
-                <label>Tipologia evento</label>
-                <select name="tipologia">
-                  <option value="Aziendale">Aziendale</option>
-                  <option value="Privato">Privato</option>
-                  <option value="Lancio prodotto">Lancio prodotto</option>
-                  <option value="Team building">Team building</option>
-                </select>
-              </div>
-              <div class="col">
-                <label>Preferenza location</label>
-                <select name="location">
-                  <option value="Interna/esterna">Interna/esterna</option>
-                  <option value="Terrazza/loft">Terrazza/loft</option>
-                  <option value="Villa/giardino">Villa/giardino</option>
-                  <option value="Spazio industriale">Spazio industriale</option>
-                </select>
-              </div>
-              <div class="col">
-                <label>Pacchetto</label>
-                <select name="pacchetto" id="pacchetto">
-                  <option value="basic">Basic</option>
-                  <option value="plus" selected>Plus</option>
-                  <option value="full">Full</option>
-                </select>
-              </div>
+            <div class="field">
+              <label>TELEFONO</label>
+              <input type="tel" name="telefono" placeholder="+39 ..." />
             </div>
-
-            <div class="row switches">
-              <label class="switch">
-                <input type="checkbox" name="food" checked />
-                <span>Food</span>
-              </label>
-              <label class="switch">
-                <input type="checkbox" name="beverage" checked />
-                <span>Beverage</span>
-              </label>
-              <label class="switch">
-                <input type="checkbox" name="entertainment" checked />
-                <span>Entertainment</span>
-              </label>
+            <div class="field">
+              <label>CITTÀ</label>
+              <select name="citta" required>
+                <option value="">SELEZIONA CITTÀ</option>
+                <option>Milano</option>
+                <option>Roma</option>
+                <option>Torino</option>
+                <option>Venezia</option>
+                <option>Firenze</option>
+                <option>Bologna</option>
+                <option>Napoli</option>
+                <option>Bari</option>
+                <option>Genova</option>
+                <option>Verona</option>
+              </select>
             </div>
-
-            <label>Note / esigenze particolari</label>
-            <textarea name="messaggio" rows="4" placeholder="Es. tema evento, esigenze alimentari, brand guidelines…"></textarea>
-
-            <label class="privacy">
-              <input type="checkbox" name="privacy" required />
-              <span>Accetto l'uso dei miei dati per essere ricontattato/a. Leggi l'informativa privacy.</span>
-            </label>
-
-            <div class="form-actions">
-              <button class="btn primary" type="submit">Invia richiesta</button>
-              <div class="muted">Stima attuale: <strong id="stima">€ 0</strong></div>
+            <div class="field">
+              <label>DATA EVENTO</label>
+              <input type="date" name="data" />
             </div>
-          </form>
-
-          <aside class="card summary">
-            <div class="muted">Riepilogo preventivo</div>
-            <div class="summary-grid">
-              <div>Pacchetto</div><div id="s-pack" class="right">Plus</div>
-              <div>Base</div><div id="s-base" class="right">€ 0</div>
-              <div>Extra variabili</div><div id="s-extra" class="right">€ 0</div>
-              <div>Persone</div><div id="s-persone" class="right">50</div>
-              <div>Città</div><div id="s-citta" class="right">Milano</div>
-              <div>Servizi</div><div id="s-servizi" class="right">Food • Beverage • Entertainment</div>
+            <div class="field">
+              <label>PACCHETTO</label>
+              <select name="pacchetto" required>
+                <option value="">SELEZIONA PACCHETTO</option>
+                <option>Basic</option>
+                <option>Plus</option>
+                <option>Full Experience</option>
+              </select>
             </div>
-            <div class="total">
-              <div class="muted">Totale stimato</div>
-              <div id="s-totale" class="big">€ 0</div>
+            <div class="field full">
+              <label>MESSAGGIO</label>
+              <textarea name="messaggio" rows="4" placeholder="DESCRIVI L'EVENTO (OSPITI, LOCATION, CATERING, ENTERTAINMENT)"></textarea>
             </div>
-            <div class="tiny muted">* Stima indicativa non vincolante. Il preventivo definitivo verrà confermato dopo call conoscitiva.</div>
-          </aside>
-        </div>
-      </div>
-    </section>
+          </div>
 
-    <section id="contatti" class="section section-alt">
-      <div class="container">
-        <h2>Contatti</h2>
-        <p class="muted">Preferisci parlare con noi? Siamo a Milano, ma lavoriamo in tutta Italia.</p>
-        <div class="grid-3">
-          <div class="card center">📧 <strong>info@20eventi.it</strong></div>
-          <div class="card center">📞 <strong>+39 000 000 0000</strong></div>
-          <div class="card center">📍 Milano</div>
-        </div>
+          <input type="hidden" name="_subject" value="Richiesta preventivo — 20eventi" />
+          <input type="hidden" name="_replyto" value="info@20eventi.it" />
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">INVIA RICHIESTA</button>
+            <a class="btn btn-whatsapp" href="https://wa.me/?text=Ciao%2C%20vorrei%20un%20preventivo%20per%20un%20evento%20aziendale" target="_blank" rel="noopener">WHATSAPP</a>
+          </div>
+          <p class="privacy-note">INVIANDO ACCETTI LA <a href="#" onclick="alert('Aggiungi qui il link alla Privacy Policy.'); return false;">PRIVACY POLICY</a>.</p>
+          <p class="small-hint">SE IL MODULO NON DOVESSE INVIARE, SCRIVICI A <a href="mailto:info@20eventi.it">info@20eventi.it</a></p>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer id="contatti" class="site-footer">
     <div class="container footer-inner">
-      <div>© <span id="year"></span> 20eventi srl • P.IVA 00000000000</div>
-      <div class="links">
-        <a href="#">Privacy</a>
-        <a href="#">Cookie</a>
-        <a href="#preventivo">Richiedi preventivo</a>
+      <div class="footer-brand">
+        <div class="logo small">20</div>
+        <div>
+          <div class="footer-title">20EVENTI</div>
+          <div class="footer-sub">NEXUS GROUP SRL — P. IVA 00000000000</div>
+        </div>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:info@20eventi.it" class="footer-link">info@20eventi.it</a>
+        <a href="https://wa.me/?text=Ciao%2C%20vorrei%20un%20preventivo%20per%20un%20evento%20aziendale" class="footer-link" target="_blank" rel="noopener">WHATSAPP</a>
       </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
   <script src="script.js"></script>
 </body>
 </html>

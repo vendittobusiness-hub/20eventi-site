@@ -1,0 +1,82 @@
+/* 20EVENTI — minimal, elegante, festaiolo */
+:root{
+  --violet: #7b2ff7;
+  --fuchsia: #ff3cac;
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #f6f6f8;
+  --border: #eaeaf0;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text)}
+h1,h2,h3,h4,h5,h6,.btn,.nav-link,.pill,.price,.section-sub,label, input, select, textarea{ text-transform: uppercase; letter-spacing: 0.02em; }
+
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.narrow{max-width:820px}
+
+.site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:30}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--fuchsia),var(--violet));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
+.logo.small{width:36px;height:36px;border-radius:10px}
+.brand-name{font-weight:800}
+.brand-payoff{font-size:12px;opacity:.75}
+
+.nav{display:flex;align-items:center;gap:14px}
+.nav-link{padding:10px 12px;border-radius:999px;border:1px solid var(--border);text-decoration:none;color:var(--text);font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:800;border:none;cursor:pointer}
+.btn-primary{background:linear-gradient(135deg,var(--fuchsia),var(--violet));color:#fff}
+.btn-secondary{background:#fff;border:1px solid var(--border);color:var(--text)}
+.btn-outline{background:#fff;border:2px solid #000;color:#000}
+.btn-ghost{background:#fff;border:1px solid var(--border);color:#000}
+.btn-whatsapp{background:#25D366;color:#fff}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 20px rgba(0,0,0,.06)}
+.menu-toggle{display:none}
+
+.hero{padding:72px 0 36px}
+.gradient{background: radial-gradient(1200px 600px at 20% -10%, rgba(255,60,172,.15), transparent 55%), radial-gradient(1000px 600px at 100% 0%, rgba(123,47,247,.12), transparent 60%)}
+.hero-inner{display:flex;align-items:center}
+.hero-copy h1{font-size:42px;line-height:1.06;margin:0 0 10px}
+.subtitle{opacity:.75;margin:0 0 20px}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.pill-row{display:flex;gap:10px;flex-wrap:wrap}
+.pill{padding:10px 14px;border-radius:12px;background:#fff;border:1px solid var(--border);font-size:12px}
+
+.section{padding:56px 0}
+.section.muted{background:var(--muted)}
+.section h2{font-size:28px;margin:0 0 6px}
+.section-sub{opacity:.7;margin:0 0 26px}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:14px}
+.card.featured{border-width:2px;border-color:transparent;box-shadow:0 10px 35px rgba(0,0,0,.08);position:relative;background:linear-gradient(#fff,#fff) padding-box, linear-gradient(135deg,var(--fuchsia),var(--violet)) border-box}
+.badge{position:absolute;top:-10px;right:16px;background:linear-gradient(135deg,var(--fuchsia),var(--violet));color:#fff;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:800}
+.card-header h3{margin:0}
+.price{font-size:20px;margin:6px 0 0}
+.price .from{display:block;font-size:11px;opacity:.6}
+
+.card-list{margin:0;padding-left:18px;display:grid;gap:6px}
+.card-list li{margin-left:6px}
+
+.form{background:#fff;border:1px solid var(--border);border-radius:16px;padding:22px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1 / -1}
+input,select,textarea{padding:12px 12px;border-radius:12px;border:1px solid var(--border);font-weight:600;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--violet);box-shadow:0 0 0 3px rgba(123,47,247,.15)}
+.form-actions{display:flex;gap:10px;margin-top:10px}
+.privacy-note,.small-hint{font-size:12px;opacity:.7;margin-top:8px}
+
+.site-footer{padding:28px 0;border-top:1px solid var(--border);background:#fff}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.footer-title{font-weight:800}
+.footer-sub{opacity:.7;font-size:12px}
+.footer-link{color:#111;text-decoration:none;font-weight:700;margin-left:14px}
+
+@media (max-width: 900px){
+  .cards{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  .nav{display:none}
+  .menu-toggle{display:inline-flex;background:#fff;border:1px solid var(--border);border-radius:10px;padding:8px 10px}
+}
