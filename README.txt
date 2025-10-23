@@ -36,7 +36,7 @@ Esempio Italia: `https://wa.me/393331234567?text=...`
 
 ## Footer
 Nome azienda: **NEXUS GROUP SRL**  
-Partita IVA: **P. IVA 00000000000**  
+Partita IVA: **P. IVA 06343770969   **  
 → Sostituisci con i dati reali in `index.html`.
 
 ---
